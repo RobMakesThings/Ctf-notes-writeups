@@ -1,0 +1,73 @@
+# Nmap 7.93 scan initiated Fri Jan 13 21:50:15 2023 as: nmap -sC -sV -vv -oN nmap.txt 10.10.238.160
+Increasing send delay for 10.10.238.160 from 0 to 5 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.10.238.160 from 5 to 10 due to 11 out of 19 dropped probes since last increase.
+Nmap scan report for 10.10.238.160
+Host is up, received syn-ack (0.18s latency).
+Scanned at 2023-01-13 21:50:16 EST for 43s
+Not shown: 994 closed tcp ports (conn-refused)
+PORT    STATE SERVICE     REASON  VERSION
+22/tcp  open  ssh         syn-ack OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 992331bbb1e943b756944cb9e82146c5 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKeTyrvAfbRB4onlz23fmgH5DPnSz07voOYaVMKPx5bT62zn7eZzecIVvfp5LBCetcOyiw2Yhocs0oO1/RZSqXlwTVzRNKzznG4WTPtkvD7ws/4tv2cAGy1lzRy9b+361HHIXT8GNteq2mU+boz3kdZiiZHIml4oSGhI+/+IuSMl5clB5/FzKJ+mfmu4MRS8iahHlTciFlCpmQvoQFTA5s2PyzDHM6XjDYH1N3Euhk4xz44Xpo1hUZnu+P975/GadIkhr/Y0N5Sev+Kgso241/v0GQ2lKrYz3RPgmNv93AIQ4t3i3P6qDnta/06bfYDSEEJXaON+A9SCpk2YSrj4A7
+|   256 57c07502712d193183dbe4fe679668cf (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBI0UWS0x1ZsOGo510tgfVbNVhdE5LkzA4SWDW/5UjDumVQ7zIyWdstNAm+lkpZ23Iz3t8joaLcfs8nYCpMGa/xk=
+|   256 46fa4efc10a54f5757d06d54f6c34dfe (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICHVctcvlD2YZ4mLdmUlSwY8Ro0hCDMKGqZ2+DuI0KFQ
+80/tcp  open  http        syn-ack Apache httpd 2.4.18 ((Ubuntu))
+|_http-title: Skynet
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+110/tcp open  pop3        syn-ack Dovecot pop3d
+|_pop3-capabilities: RESP-CODES UIDL SASL PIPELINING TOP AUTH-RESP-CODE CAPA
+139/tcp open  netbios-ssn syn-ack Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+143/tcp open  imap        syn-ack Dovecot imapd
+|_imap-capabilities: IDLE ENABLE OK ID more capabilities IMAP4rev1 LITERAL+ post-login SASL-IR LOGIN-REFERRALS have listed LOGINDISABLEDA0001 Pre-login
+445/tcp open  netbios-ssn syn-ack Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)
+Service Info: Host: SKYNET; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 45198/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 38894/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 20890/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 13280/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: mean: 2h00m02s, deviation: 3h27m51s, median: 2s
+| nbstat: NetBIOS name: SKYNET, NetBIOS user: <unknown>, NetBIOS MAC: 000000000000 (Xerox)
+| Names:
+|   SKYNET<00>           Flags: <unique><active>
+|   SKYNET<03>           Flags: <unique><active>
+|   SKYNET<20>           Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   0000000000000000000000000000000000
+|   0000000000000000000000000000000000
+|_  0000000000000000000000000000
+| smb2-time: 
+|   date: 2023-01-14T02:50:54
+|_  start_date: N/A
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
+|   Computer name: skynet
+|   NetBIOS computer name: SKYNET\x00
+|   Domain name: \x00
+|   FQDN: skynet
+|_  System time: 2023-01-13T20:50:54-06:00
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan 13 21:50:59 2023 -- 1 IP address (1 host up) scanned in 43.32 seconds
