@@ -1,0 +1,32 @@
+# Nmap 7.93 scan initiated Sat Nov 26 21:25:29 2022 as: nmap -sC -sV -vv -oN nmap.txt 10.10.119.5
+Nmap scan report for 10.10.119.5
+Host is up, received syn-ack (0.18s latency).
+Scanned at 2022-11-26 21:25:30 EST for 24s
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 247ec66b2858a890a1403625a2e4add0 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtB7BXYj2z2tMDSyBVD2t1UWvdrF/rNaN+y28jkbtDLho8EZCjrgAJlTdp1RUegNTMQZVwlYVJHza0Ys3rZXzgyyPz3j7rykUvSifsf6pwsisspJM6akppF181xQEKhQVZ3/dzBtTpEnN2MTKnGBTr/cctCY2aMpXoPFli6qT+uTL6Nhzask+GsJ+JUppwkErvhKoLALh7R6LXWDj61QYZetJ6XgfejWF+S/mCsZH+72Tz4MMaKlgsgSb2MFu/Y4iHBLQ0GGWcSplhQot2jwlvWmof9xuLRRxD67tj6BY04HxE3S8K6D2Gf5BsuROTVSer9RyVour7fsQKtxmfy4DYzq+DMZIrGxaLbwc7Tb6CIx303Mm6R2XEyd84un/gk3wMXCVohJYIfO8QFVweJaFZOihgBF+ORk7pyNb9QujSv2YlYC+768j4m2gzCVY3oCNMKw6HKt/0QqI1Ok3unDVv8b/12rPTSB1cB2/9SrqLu9m2x0vr825iKpDFAyt4shM=
+|   256 b9db942438fbe1f92798b98a12e84bbf (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNQcT3LnBrrjDjZiTBMBsc5IWnGGbUsRLTcQCICo75K9fVdCTJJZupS2X+CThmfScX5sBOmiz/J76tF76Xeu7OU=
+|   256 503193315ca6d4dd3235cefaf9bb6658 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAPgNBe9Egf8z9a/aCtSWVG0N2Xf7H+3E9Dtz1lGL50F
+80/tcp open  http    syn-ack Apache httpd 2.4.38 ((Debian))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-favicon: Unknown favicon MD5: CFFCD51EFA49AB1AC1D8AC6E36462235
+| http-title: 24X7 System+
+|_Requested resource was /login.php
+|_http-server-header: Apache/2.4.38 (Debian)
+| http-robots.txt: 1 disallowed entry 
+|_/backup/chat.txt
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov 26 21:25:54 2022 -- 1 IP address (1 host up) scanned in 24.92 seconds

@@ -1,0 +1,14 @@
+# Nmap 7.93 scan initiated Sun Nov 12 23:57:39 2023 as: nmap -sV -vv -p- -oN nmap.txt 10.10.225.25
+Nmap scan report for 10.10.225.25
+Host is up, received conn-refused (0.17s latency).
+Scanned at 2023-11-12 23:57:40 EST for 941s
+Not shown: 65532 closed tcp ports (conn-refused)
+PORT      STATE SERVICE REASON  VERSION
+22/tcp    open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+80/tcp    open  http    syn-ack Apache httpd 2.4.41 ((Ubuntu))
+37370/tcp open  ftp     syn-ack vsftpd 3.0.3
+Service Info: OSs: Linux, Unix; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov 13 00:13:21 2023 -- 1 IP address (1 host up) scanned in 942.21 seconds
