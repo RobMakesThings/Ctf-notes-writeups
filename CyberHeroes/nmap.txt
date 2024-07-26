@@ -1,0 +1,25 @@
+# Nmap 7.93 scan initiated Fri Dec  9 23:25:59 2022 as: nmap -sC -sV -vv -oN nmap.txt 10.10.79.70
+Nmap scan report for 10.10.79.70
+Host is up, received conn-refused (0.18s latency).
+Scanned at 2022-12-09 23:26:00 EST for 29s
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 52addb0a8e10ad2bda829d3ad4ea7933 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAwy9HeKOe63N/c5VmNI6xuekiT3jBfLd3hhFPre+fnX8OguCNQFc2UiU+5YzZEpiNGNDwHI/FuR94AFLQkpgcXgr1Ijwno5sStwuCsL4ggsxlGXXc47LbrOxseYJUHz3KVQGjUGgHZBYxi0+fZHUVfNLBaq00WXFGyBLIbM9H2rn9zj3TGdsy7aFmzV4oQDxUWr36DVWo9LJllY98cI4VpZDqsU5j6JjyictTDSoH64xhbFZg/dWbydUzeD6DlTePYivv9lEdFj1vMyTMKt+l5beKsDBkLUcqpkREAVixDQr2n2pWIPmA8yD0wijK8kSfY/9pV3IJRDneOISTU/1B6Fvz/n1Lsvit8a/G2DFucQRMjxgCkuLMdK6DAXd/LEi5HZVZMIxy/B/egWMsrwSPi/CTmsB81GzHOaDN02PZYg9Z7Sn1EVw2XDi+F/oJXRfUXckCNKvPizbLYLI7ybvs+vN+qIhLXsBgpg/mI2h8w11u7BQKcnC0uecaF3zP2k0=
+|   256 b78b7f8a59c403c2ffc558159a940439 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEQ8hNEq0H6+/KaiQzUr0U3X3ymMQPQawBxGlpitZyW6KYUso2pvfalzbzUmz2oCBKFx5KNjm7zoMEUq55mO0zM=
+|   256 71aecb5d3914401a415030c67e5d6271 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK6lmfvPDI8/3O5yZgc+ShBJSeCfoDVLnjuLjcLFpBpr
+80/tcp open  http    syn-ack Apache httpd 2.4.48 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: 03983666D3C4B72ECAAB464BD200E6FA
+|_http-title: CyberHeros : Index
+| http-methods: 
+|_  Supported Methods: OPTIONS HEAD GET POST
+|_http-server-header: Apache/2.4.48 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec  9 23:26:29 2022 -- 1 IP address (1 host up) scanned in 30.10 seconds

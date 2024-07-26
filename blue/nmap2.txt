@@ -1,0 +1,96 @@
+# Nmap 7.92 scan initiated Wed Oct 26 23:47:56 2022 as: nmap -sC -sV -vv -oN nmap2.txt 10.10.220.54
+Nmap scan report for 10.10.220.54
+Host is up, received conn-refused (0.18s latency).
+Scanned at 2022-10-26 23:47:56 EDT for 121s
+Not shown: 991 closed tcp ports (conn-refused)
+PORT      STATE SERVICE            REASON  VERSION
+135/tcp   open  msrpc              syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn        syn-ack Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       syn-ack Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp  open  ssl/ms-wbt-server? syn-ack
+| ssl-cert: Subject: commonName=Jon-PC
+| Issuer: commonName=Jon-PC
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2022-10-26T03:43:33
+| Not valid after:  2023-04-27T03:43:33
+| MD5:   4842 b155 100a 6502 65f8 33bf bf52 6fc7
+| SHA-1: 6a0d 90a0 197a 26f3 8dd2 68c4 39c1 bd62 5c80 b95d
+| -----BEGIN CERTIFICATE-----
+| MIIC0DCCAbigAwIBAgIQZraYNTX8kqBB36Lfk9XI9zANBgkqhkiG9w0BAQUFADAR
+| MQ8wDQYDVQQDEwZKb24tUEMwHhcNMjIxMDI2MDM0MzMzWhcNMjMwNDI3MDM0MzMz
+| WjARMQ8wDQYDVQQDEwZKb24tUEMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+| AoIBAQDV5BZByK48AvUPSOGC3mDnf5iEr0FuIxS2m5vJt2uWxuRB35Ay4EvqNN1O
+| juIC7z0ib5NVEw9wZKKJUi2PYj4+WkgvfimHfDD3vjvgUt89XV40YwGMg2FnMLm1
+| na+xBTH0wjJwxi2zXl2Y3ZyEKOuJvEwwYnEBBWeFLCdG1ghGcuiMa0A9jDk1k2hQ
+| Bgrr5Ar0cttHhKq+Ixt5d7mDIJb/vjzPMM32r5ljN7Qa/IX/8TTknHWg72Xy0DRB
+| FWZAKMPAcj2yWI+Vz7zhqUUQ+NYXrLj2sw1amEjkL6sRlpYh2FCYs1vDhWPpYBgB
+| 48ul1RAu4EFam07fW3Xnbj0nhKG7AgMBAAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUF
+| BwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQUFAAOCAQEACcdi9RRIQYCF4qWb
+| O9l2rFYuY9pIWZzgzobGAFHVzuV8TUc/zYDbPgd6K4SFrIBAHH6qKCSnkTH4Z9t6
+| RsxRnCEoj4MKw1L6GtG5u8s3ASTtyjjswezeB29og5kZ0UfKfoyL0/veOQ6sbbwl
+| QdREqYTrigjD18CLDEl5WYDDzkmJhAB1Sl6tPKYNRee9/58Tk2zzYC/8sXTKC3VI
+| HI4XVhUbyr2ifYKH9a3hwzgfhDwJUNzhq4cQXpBfVWsEczCe+AQY/vWw/oBx9jmO
+| k+G5ubC7Cw8KXaqFgXdQ29KCiiZqImNo3ydhDP1BXxBib7WnkyOmAacBe0eueA4J
+| We7XZg==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2022-10-27T03:50:01+00:00; +4s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: JON-PC
+|   NetBIOS_Domain_Name: JON-PC
+|   NetBIOS_Computer_Name: JON-PC
+|   DNS_Domain_Name: Jon-PC
+|   DNS_Computer_Name: Jon-PC
+|   Product_Version: 6.1.7601
+|_  System_Time: 2022-10-27T03:49:55+00:00
+49152/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49153/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49154/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49158/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49159/tcp open  msrpc              syn-ack Microsoft Windows RPC
+Service Info: Host: JON-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1h00m03s, deviation: 2h14m10s, median: 2s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 49393/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 53123/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 13816/udp): CLEAN (Timeout)
+|   Check 4 (port 59795/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| nbstat: NetBIOS name: JON-PC, NetBIOS user: <unknown>, NetBIOS MAC: 02:eb:eb:32:fd:79 (unknown)
+| Names:
+|   JON-PC<00>           Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   JON-PC<20>           Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   02 eb eb 32 fd 79 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| smb2-security-mode: 
+|   2.1: 
+|_    Message signing enabled but not required
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2022-10-27T03:49:55
+|_  start_date: 2022-10-27T03:43:31
+| smb-os-discovery: 
+|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
+|   Computer name: Jon-PC
+|   NetBIOS computer name: JON-PC\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2022-10-26T22:49:55-05:00
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 26 23:49:57 2022 -- 1 IP address (1 host up) scanned in 121.76 seconds
